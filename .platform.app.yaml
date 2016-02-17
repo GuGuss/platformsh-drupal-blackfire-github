@@ -16,6 +16,13 @@ dependencies:
     php:
         "drush/drush": "^8.0"
 
+runtime:
+  extensions:
+    - name: blackfire
+      configuration:
+        server_id: "8f79acee-591d-46ef-9ffa-40a95a8232e7"
+        server_token: "ce074d059ed498cb0187854c683002844a41c72f6725530212bb118dc3068ee2"
+
 # The relationships of the application with services or other applications.
 # The left-hand side is the name of the relationship as it will be exposed
 # to the application in the PLATFORM_RELATIONSHIPS variable. The right-hand
