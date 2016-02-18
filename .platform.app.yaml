@@ -5,7 +5,7 @@
 name: php
 
 # The runtime the application uses.
-type: "php:7.0"
+type: "php:5.5"
 
 # Configuration of the build of this application.
 build:
@@ -29,6 +29,7 @@ runtime:
 # side is in the form `<service name>:<endpoint name>`.
 relationships:
     database: "mysql:mysql"
+
 
 # The configuration of app when it is exposed to the web.
 web:
