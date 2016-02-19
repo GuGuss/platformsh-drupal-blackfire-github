@@ -5,11 +5,12 @@
 name: php
 
 # The runtime the application uses.
-type: "php:5.5"
+type: "php:7.0"
 
 # Configuration of the build of this application.
 build:
     flavor: drupal
+
 
 # The build-time dependencies of the app.
 dependencies:
