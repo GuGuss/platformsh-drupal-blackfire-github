@@ -5,16 +5,24 @@
 name: php
 
 # The runtime the application uses.
-type: "php:5.6"
+type: "php:7.0"
 
 # Configuration of the build of this application.
 build:
     flavor: drupal
 
+
 # The build-time dependencies of the app.
 dependencies:
     php:
         "drush/drush": "^8.0"
+
+runtime:
+  extensions:
+    - name: blackfire
+      configuration:
+        server_id: "8f79acee-591d-46ef-9ffa-40a95a8232e7"
+        server_token: "ce074d059ed498cb0187854c683002844a41c72f6725530212bb118dc3068ee2"
 
 # The relationships of the application with services or other applications.
 # The left-hand side is the name of the relationship as it will be exposed
@@ -22,8 +30,6 @@ dependencies:
 # side is in the form `<service name>:<endpoint name>`.
 relationships:
     database: "mysql:mysql"
-#    solr: "solr:solr"
-#    redis: "redis:redis"
 
 # The configuration of app when it is exposed to the web.
 web:
@@ -42,6 +48,7 @@ mounts:
     "/config": "shared:files/config"
     "/private": "shared:files/private"
     "/drush-backups": "shared:files/drush-backups"
+
 
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
